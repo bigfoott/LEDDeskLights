@@ -49,7 +49,7 @@ void changeLight()
   {
     status = false;
 
-    if (rand == 0)
+    if (rand == 0) // Sweep start to end
     {
       for (int i = 0; i < LED_COUNT; i++)
       {
@@ -57,7 +57,7 @@ void changeLight()
         strip.show();
       }
     }
-    else if (rand == 1)
+    else if (rand == 1) // Fade all
     {
       for (int i = 84; i >= 0; i--)
       {
@@ -69,7 +69,7 @@ void changeLight()
         delay(1);
       }
     }
-    else if (rand == 2)
+    else if (rand == 2) // Sweep end to start
     {
       for (int i = LED_COUNT - 1; i >= 0; i--)
       {
@@ -77,7 +77,7 @@ void changeLight()
         strip.show();
       }
     }
-    else if (rand == 3)
+    else if (rand == 3) // Turn off in random order
     {
       int arr[LED_COUNT];
       for (int i = 0; i < LED_COUNT; i++)
@@ -103,7 +103,7 @@ void changeLight()
   {
     status = true;
 
-    if (rand == 0)
+    if (rand == 0) // Sweep start to end
     {
       for (int i = 0; i < LED_COUNT; i++)
       {
@@ -111,7 +111,7 @@ void changeLight()
         strip.show();
       }
     }
-    else if (rand == 1)
+    else if (rand == 1) // Fade all
     {
       for (int i = 1; i <= 85; i++)
       {
@@ -123,7 +123,7 @@ void changeLight()
         delay(1);
       }
     }
-    else if (rand == 2)
+    else if (rand == 2) // Sweep end to start
     {
       for (int i = LED_COUNT - 1; i >= 0; i--)
       {
@@ -131,7 +131,7 @@ void changeLight()
         strip.show();
       }
     }
-    else if (rand == 3)
+    else if (rand == 3) // Turn on in random order
     {
       int arr[LED_COUNT];
       for (int i = 0; i < LED_COUNT; i++)
